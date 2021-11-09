@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Bundle Install",
+            "command": "bundle",
+            "args": [
+                "install"
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "Jekyll (Development)",
+            "command": "jekyll",
+            "args": [
+                // "serve",
+                // "-w",
+                // "-D",
+                // "--future",
+                "liveserve",
+                "-w",
+                "-D",
+                "--config",
+                "_config.yml,_config.dev.yml",
+                "--host",
+                "0.0.0.0"
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        // },
+        // {
+        //     "label": "Jekyll",
+        //     "command": "jekyll",
+        //     "args": [
+        //         "serve",
+        //         "-w",
+        //         "--host",
+        //         "0.0.0.0"
+        //     ],
+        //     "type": "shell",
+        //     "problemMatcher": []
+        }
+    ]
+} 

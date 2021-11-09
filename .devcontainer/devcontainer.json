@@ -1,0 +1,56 @@
+{
+	"name": "GitHub Pages",
+    "dockerFile": "Dockerfile",
+    "context": "../",
+
+    // The optional 'runArgs' property can be used to specify   additional runtime arguments.
+    "runArgs": [
+        "-u", "jekyll",
+        // "-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro",
+    ],
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		// "terminal.integrated.profiles.linux": {
+		// 	"bash": {
+		// 		"path": "bash"
+		// 	},
+		// },
+		// "terminal.integrated.defaultProfile.linux": "bash"
+		"terminal.integrated.shell.linux": "/bin/bash",
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"mutantdino.resourcemonitor",
+        // yaml for data files
+        "redhat.vscode-yaml",
+        // liquid templating syntax highlighting
+        "sissel.shopify-liquid",
+        // jekyll
+        "ginfuru.ginfuru-vscode-jekyll-syntax",
+        "ginfuru.vscode-jekyll-snippets",
+        // markdown
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        // html/css
+        "ecmel.vscode-html-css",
+        "aeschli.vscode-css-formatter",
+        // editing
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.wordcount",
+        "mhutchie.git-graph"
+    ],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"appPort": [4000],
+
+    // Commands to run after the container is created.
+    // "postCreateCommand": "sudo cp -r /root/.ssh-localhost ~ && sudo chown -R $(id -u):$(id -g) ~/.ssh-localhost && mv ~/.ssh-localhost ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
+    // "postCreateCommand": [
+    //     "bundle install"
+    // ],
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "jekyll"
+}

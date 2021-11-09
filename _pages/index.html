@@ -1,0 +1,136 @@
+---
+permalink: /
+title: ""
+author_profile: false
+redirect_from: 
+  - /about.html
+---
+
+<section id="about" class="home-section">
+  {% if page.author and site.data.authors[page.author] %}
+    {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+  {% endif %}
+
+  <div itemscope itemtype="http://schema.org/Person">
+    <div class="my_about_wrap">
+      <div class="author__avatar">
+        {% if author.avatar contains "://" %}
+          {% assign src_img =  author.avatar %}
+        {% else %}
+          {% assign src_img = author.avatar | prepend: "/images/" | prepend: base_path %}
+        {% endif %}
+        
+        <picture>
+          <source type="image/avif" srcset="{{ src_img | append: '.avif' }}">
+          <source type="image/webp" srcset="{{ src_img | append: '.webp' }}">
+          <img src="{{ src_img | append: '.jpg' }}" width="163" height="200" class="author__avatar" alt="{{ author.name }}">
+        </picture>
+      </div>
+      <div class="aboutme">
+        <h2>About me</h2>
+
+        <p>
+          I'm an adjunct lecturer at the University of Barcelona, recently graduated from a Master in advanced mathematics.
+          In the coming months I will begin my PhD in Mathematics at the University of Barcelona.
+        </p>
+        
+        <div class="author__urls-wrapper">
+          <ul class="my_about_urls author__urls social-icons">
+            <!-- {% if author.location %}
+              <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+            {% endif %} -->
+            {% if author.email %}
+              <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+            {% endif %}
+            {% if author.twitter %}
+              <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            {% endif %}
+            {% if author.github %}
+              <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            {% endif %}
+          </ul>
+        </div>
+
+        <h3>Interests:</h3>
+        <ul>
+          <li>
+            Higher category theory
+          </li>
+          <li>
+            Synthetic homotopy theory
+          </li>
+          <li>
+            Homotopy type theory
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="home-section">
+  <h2>Education</h2>
+  <ul>
+    <li>
+      <strong>Master in Advanced Mathematics</strong>, <em>University of Barcelona</em> (2020 - 2021)
+    </li>
+    <li>
+      <strong>Degree in Mathematics</strong>, <em>University of Barcelona</em> (2014 - 2020)
+    </li>
+    <li>
+      <strong>Degree in Computer Science</strong>, <em>University of Barcelona</em> (2014 - 2020)
+    </li>
+  </ul>
+</section>
+
+<section id="teaching" class="home-section">
+  <h2>Teaching</h2>
+  <ul>
+    <li>
+      <strong>Adjunct lecturer</strong>, <em>University of Barcelona</em> (Sep. 2021 - Present)
+    </li>
+  </ul>
+</section>
+
+<!-- <section id="publications" class="home-section">
+  Bachelor Thesis
+</section> -->
+
+<section id="talks" class="home-section">
+  <h2>Talks</h2>
+  <ul>
+    <li>
+      <strong>Topological models of \(\infty\)-groupoids</strong>, <em>SIMBA Seminar: Seminari Informal de Matemàtiques de Barcelona</em> (Nov. 2021)
+    </li>
+    <li>
+      <strong>Grothendieck's homotopy hypothesis</strong>, <em>Seminar of Fall 2021 about Algebraic Topology at the University of Barcelona</em> (Oct. 2021)
+    </li>
+    <li>
+      <strong>Modelos topológicos de infinito grupoides</strong>, <em>IX Encuentro de Jóvenes Topólogos</em> (Oct. 2021)
+    </li>
+    <li>
+      <strong>\(p\)-adic model structure on simplicial sets</strong>, <em>Seminar of Spring 2021 about Algebraic Topology at the University of Barcelona</em> (May 2021)
+    </li>
+    <li>
+      <strong>WebAssembly: Características e implicaciones en cuanto a seguridad y portabilidad</strong>, <em>Overdrive 2020: Home Edition</em> (Apr. 2020)
+    </li>
+    <li>
+      <strong>Fonaments de la teoria homotòpica de tipus</strong>, <em>Seminar of Spring 2020 about Algebraic Topology at the University of Barcelona</em> (Mar. 2020)
+    </li>
+    <li>
+      <strong>Desmitificant els virus informàtics</strong>, <em>Faculty of Mathematics and Computer Science, University of Barcelona</em> (Mar. 2018)
+    </li>
+    <li>
+      <strong>Passwords I: Users</strong>, <em>Faculty of Mathematics and Computer Science, University of Barcelona</em> (Oct. 2017)
+    </li>
+  </ul>
+</section>
+
+<section id="posters" class="home-section">
+  <h2>Posters</h2>
+  <ul>
+    <li>
+      <strong>Recubridores en teoría homotópica de tipos</strong>, <em>XXVII Encuentro de Topología</em> (Oct.2021)
+    </li>
+  </ul>
+</section>
