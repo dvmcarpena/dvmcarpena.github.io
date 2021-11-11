@@ -102,6 +102,7 @@ exclude:
   - Rakefile
   - assets/js/_main.js
   - assets/sources
+  - images/icon/sources
   - config
   - gulpfile.js
   - log
