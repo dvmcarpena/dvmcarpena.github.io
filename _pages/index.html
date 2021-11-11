@@ -7,9 +7,7 @@ redirect_from:
 ---
 
 <section id="about" class="home-section">
-  {% if page.author and site.data.authors[page.author] %}
-    {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
-  {% endif %}
+  {% assign author = site.author %}
 
   <div itemscope itemtype="http://schema.org/Person">
     <div class="my_about_wrap">

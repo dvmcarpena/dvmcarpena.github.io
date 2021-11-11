@@ -13,7 +13,6 @@
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";
-@import "vendor/susy/susy";
 
 @import "reset";
 @import "base";
@@ -34,9 +33,6 @@
 @import "archive";
 @import "sidebar";
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
 @import "print";
 
 // .home-section:nth-child(odd) {
@@ -61,7 +57,7 @@
 
 .page {
     float: unset;
-    padding-left: 10%;
+    padding-left: 5%;
     width: 90%;
 }
 
@@ -76,6 +72,7 @@
 }
 
 .aboutme {
+    box-sizing: border-box;
     padding-left: 3em;
 }
 
@@ -115,4 +112,24 @@ html {
 .my_about_urls {
     display: flex;
     flex-direction: row;
+}
+
+#main {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.masthead__inner-wrap {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#site-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.masthead__menu {
+    padding-left: 5%;
 }

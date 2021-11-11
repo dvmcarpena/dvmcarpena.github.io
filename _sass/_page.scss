@@ -3,7 +3,7 @@
    ========================================================================== */
 
 #main {
-  @include container;
+  // @include container;
   @include clearfix;
   margin-top: 2em;
   padding-left: 1em;
@@ -18,18 +18,17 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    // @include span(10 of 12 last);
+    // @include prefix(0.5 of 12);
+    // @include suffix(2 of 12);
   }
 
   .page__inner-wrap {
-    @include full();
+    // @include full();
 
     .page__content,
-    .page__meta,
-    .page__share {
-      @include full();
+    .page__meta {
+      // @include full();
     }
   }
 }
@@ -192,36 +191,6 @@
 }
 
 /*
-   Social sharing
-   ========================================================================== */
-
-.page__share {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid $border-color;
-
-  @include breakpoint(max-width $small) {
-    .btn span {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-  }
-}
-
-.page__share-title {
-  margin-bottom: 10px;
-  font-size: $type-size-6;
-  text-transform: uppercase;
-}
-
-
-/*
    Page meta
    ========================================================================== */
 
@@ -282,7 +251,7 @@
    ========================================================================== */
 
 .page__comments {
-  @include full();
+  // @include full();
 }
 
 .page__comments-title {
@@ -385,7 +354,7 @@
   float: left;
 
   @include breakpoint($large) {
-    @include pre(2.5 of 12);
+    // @include pre(2.5 of 12);
   }
 
   a {

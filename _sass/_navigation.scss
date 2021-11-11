@@ -7,7 +7,7 @@
    ========================================================================== */
 
 .breadcrumbs {
-  @include container;
+  // @include container;
   @include clearfix;
   margin-top: 0;
   margin-bottom: 0;
@@ -34,11 +34,11 @@
     font-size: $type-size-6;
 
     @include breakpoint($large) {
-      @include span(10 of 12 last);
+      // @include span(10 of 12 last);
     }
 
     @include breakpoint($x-large) {
-      @include prefix(0.5 of 12);
+      // @include prefix(0.5 of 12);
     }
   }
 
@@ -57,7 +57,7 @@
    ========================================================================== */
 
 .pagination {
-  @include full();
+  // @include full();
   @include clearfix();
   margin-top: 1em;
   padding-top: 1em;
@@ -160,7 +160,6 @@
 
 .page__content + .pagination,
 .page__meta + .pagination,
-.page__share + .pagination,
 .page__comments + .pagination {
   margin-top: 2em;
   padding-top: 2em;
@@ -190,11 +189,12 @@
   }
 
   button {
-    position: absolute;
-    height: 100%;
-    right: 0;
+    position: relative;
+    // position: absolute;
+    // height: 100%;
+    // right: 0;
     padding: 0 0.5rem;
-    border: 0;
+    // border: 0;
     outline: none;
     background-color: $primary-color;
     color: #fff;
