@@ -1,0 +1,7 @@
+title: "Recubridores en teoría homotópica de tipos"
+event: "XXVII Encuentro de Topología"
+location: "Sevilla, Spain"
+date: 2021-10-22
+language: es
+file: "2021-10-22_Encuentro-de-topologia.pdf"
+abstract: La teoría homotópica de tipos es una rama de las matemáticas originada en la década de 2010, que relaciona la teoría de tipos de Martin-Löf con el estudio de los $\infty$-grupoides. Sus elementos fundamentales son el axioma de univalencia de Voevodsky y los tipos inductivos de orden superior. Cualquier resultado en teoría homotópica de tipos puede ser formalizado mediante un asistente de demostraciones. Los tipos inductivos de orden superior permiten definir tipos generados libremente por estructuras inspiradas en CW-complejos como la circunferencia, el toro o la botella de Klein. En este póster se definen los recubridores de tipos inductivos y se esboza una demostración de que el tipo de la botella de Klein admite un recubridor de dos hojas equivalente al toro.

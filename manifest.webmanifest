@@ -1,7 +1,7 @@
 {
     "name": "David Martínez Carpena",
     "icons": [
-        { "src": "/images/icon/icon-192.png", "type": "image/png", "sizes": "192x192" },
-        { "src": "/images/icon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+        { "src": "/assets/images/icon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/assets/images/icon/icon-512.png", "type": "image/png", "sizes": "512x512" }
     ]
 }

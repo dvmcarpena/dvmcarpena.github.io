@@ -15,31 +15,15 @@
             "command": "jekyll",
             "args": [
                 // "serve",
-                // "-w",
-                // "-D",
-                // "--future",
                 "liveserve",
                 "-w",
                 "-D",
                 "--config",
                 "_config.yml,_config.dev.yml",
-                "--host",
-                "0.0.0.0"
+                "--livereload"
             ],
             "type": "shell",
             "problemMatcher": []
-        // },
-        // {
-        //     "label": "Jekyll",
-        //     "command": "jekyll",
-        //     "args": [
-        //         "serve",
-        //         "-w",
-        //         "--host",
-        //         "0.0.0.0"
-        //     ],
-        //     "type": "shell",
-        //     "problemMatcher": []
         }
     ]
 } 

@@ -5,8 +5,12 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-# Site Settings
+# Locale, timezone and encoding
 locale                   : "en-IE"
+timezone                 : Europe/Madrid
+encoding                 : "utf-8"
+
+# Site Settings
 title                    : "David Martínez Carpena"
 title_separator          : "-"
 name                     : &name "David Martínez Carpena"
@@ -14,12 +18,6 @@ description              : &description "I'm an adjunct lecturer at the Universi
 url                      : https://dvmcarpena.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dvmcarpena/dvmcarpena.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 
 # SEO Related
 google_site_verification :
@@ -29,57 +27,14 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
+  username               : "dvmcarpena"
 og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-# Site Author
-author:
-  name             : "David Martínez Carpena"
-  avatar           : "profile"
-  bio              : "I'm an adjunct lecturer at the University of Barcelona, recently graduated from a Master in advanced mathematics."
-  location         : "Barcelona, Spain"
-  employer         :
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : # "http://yourfullgooglescholarurl.com"
-  email            : "dvmcarpena [at] pm.me"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "dvmcarpena"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/0000-0001-9452-5315"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : "dvmcarpena"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
-
+  links                  : # An array of links to social media profiles
 
 # Reading Files
 include:
@@ -93,7 +48,6 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - CHANGELOG
   - Capfile
   - Gemfile
   - Gruntfile.js
@@ -102,7 +56,7 @@ exclude:
   - Rakefile
   - assets/js/_main.js
   - assets/sources
-  - images/icon/sources
+  - assets/images/icon/sources
   - config
   - gulpfile.js
   - log
@@ -113,102 +67,21 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
 
 # Collections
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# Defaults
+collections: []
+# permalink: /:categories/:title/
 defaults:
   # _pages
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-  # _teaching
+      layout: default
   - scope:
-      path: ""
-      type: teaching
+      path: "files"
     values:
-      layout: single
-      author_profile: true
-      share: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Europe/Madrid # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-redirect-from
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
+      files: true
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -216,3 +89,21 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Plugins
+plugins:
+  # - jekyll-paginate
+  - jekyll-sitemap
+  # - jekyll-gist
+  - jekyll-redirect-from
+# mimic GitHub Pages with --safe
+whitelist:
+  # - jekyll-paginate
+  - jekyll-sitemap
+  # - jekyll-gist
+  - jemoji

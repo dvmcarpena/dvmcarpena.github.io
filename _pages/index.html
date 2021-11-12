@@ -1,13 +1,13 @@
 ---
 permalink: /
 title: ""
-author_profile: false
-redirect_from: 
-  - /about.html
+# layout: default
+# redirect_from: 
+#  - /about.html
 ---
 
 <section id="about" class="home-section">
-  {% assign author = site.author %}
+  {% assign author = site.data.author %}
 
   <div itemscope itemtype="http://schema.org/Person">
     <div class="my_about_wrap">
@@ -15,7 +15,7 @@ redirect_from:
         {% if author.avatar contains "://" %}
           {% assign src_img =  author.avatar %}
         {% else %}
-          {% assign src_img = author.avatar | prepend: "/images/" | prepend: base_path %}
+          {% assign src_img = author.avatar | prepend: "/assets/images/" | prepend: base_path %}
         {% endif %}
         
         <picture>
@@ -165,39 +165,70 @@ redirect_from:
 
 <section id="talks" class="home-section">
   <h2>Talks</h2>
-  <ul>
-    <li>
-      <strong>Topological models of \(\infty\)-groupoids</strong>, <em>SIMBA Seminar: Seminari Informal de Matemàtiques de Barcelona</em> (Nov. 2021)
-    </li>
-    <li>
-      <strong>Grothendieck's homotopy hypothesis</strong>, <em>Seminar of Fall 2021 about Algebraic Topology at the University of Barcelona</em> (Oct. 2021)
-    </li>
-    <li>
-      <strong>Modelos topológicos de infinito grupoides</strong>, <em>IX Encuentro de Jóvenes Topólogos</em> (Oct. 2021)
-    </li>
-    <li>
-      <strong>\(p\)-adic model structure on simplicial sets</strong>, <em>Seminar of Spring 2021 about Algebraic Topology at the University of Barcelona</em> (May 2021)
-    </li>
-    <li>
-      <strong>WebAssembly: Características e implicaciones en cuanto a seguridad y portabilidad</strong>, <em>Overdrive 2020: Home Edition</em> (Apr. 2020)
-    </li>
-    <li>
-      <strong>Fonaments de la teoria homotòpica de tipus</strong>, <em>Seminar of Spring 2020 about Algebraic Topology at the University of Barcelona</em> (Mar. 2020)
-    </li>
-    <li>
-      <strong>Desmitificant els virus informàtics</strong>, <em>Faculty of Mathematics and Computer Science, University of Barcelona</em> (Mar. 2018)
-    </li>
-    <li>
-      <strong>Passwords I: Users</strong>, <em>Faculty of Mathematics and Computer Science, University of Barcelona</em> (Oct. 2017)
-    </li>
+  <ul class="details-list">
+    {% for talk_hash in site.data.talks reversed %}
+      {% assign talk = talk_hash[1] %}
+      <!-- <li><strong>{{ talk.title }}</strong>, <em>{{ talk.event }}</em> ({{ talk.date | date: "%b. %Y" }})</li> -->
+      <li>
+        <details>
+          <summary>
+            <time datetime="{{ talk.date | date_to_xmlschema }}">{{ talk.date | date: "%b. %Y" }}</time>. <strong>{{ talk.title }}</strong>, <em>{{ talk.event }}</em>
+          </summary>
+          <div>
+            <p>
+              {% if talk.location %}
+                <span>
+                  <i class="fa fa-fw fa-map-marker-alt" aria-hidden="true"></i>{{ talk.location }}
+                </span>
+              {% endif %}
+              {% if talk.notes %}
+                <span>
+                  <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
+                  <a href="{{ talk.notes | prepend: "/files/talks/" | prepend: base_path }}">Notes</a>
+                </span>
+              {% endif %}
+            </p>
+            {% if talk.abstract %}
+              <p>{{ talk.abstract }}</p>
+            {% endif %}
+          </div>
+        </details>
+      </li>
+    {% endfor %}
   </ul>
 </section>
 
 <section id="posters" class="home-section">
   <h2>Posters</h2>
-  <ul>
-    <li>
-      <strong>Recubridores en teoría homotópica de tipos</strong>, <em>XXVII Encuentro de Topología</em> (Oct.2021)
-    </li>
+  <ul class="details-list">
+    {% for poster_hash in site.data.posters reversed %}
+      {% assign poster = poster_hash[1] %}
+      <!-- <li><strong>{{ poster.title }}</strong>, <em>{{ poster.event }}</em> ({{ poster.date | date: "%b. %Y" }})</li> -->
+      <li>
+        <details>
+          <summary>
+            <time datetime="{{ poster.date | date_to_xmlschema }}">{{ poster.date | date: "%b. %Y" }}</time>. <strong>{{ poster.title }}</strong>, <em>{{ poster.event }}</em>
+          </summary>
+          <div>
+            <p>
+              {% if poster.location %}
+                <span>
+                  <i class="fa fa-fw fa-map-marker-alt" aria-hidden="true"></i>{{ poster.location }}
+                </span>
+              {% endif %}
+              {% if poster.file %}
+                <span>
+                  <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
+                  <a href="{{ poster.file | prepend: "/files/posters/" | prepend: base_path }}">Document</a>
+                </span>
+              {% endif %}
+            </p>
+            {% if poster.abstract %}
+              <p>{{ poster.abstract }}</p>
+            {% endif %}
+          </div>
+        </details>
+      </li>
+    {% endfor %}
   </ul>
 </section>

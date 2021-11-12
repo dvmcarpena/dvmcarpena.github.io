@@ -1,0 +1,14 @@
+title: Topological models of $\infty$-groupoids
+event: "SIMBA: Youth mathematics seminar of Barcelona"
+location: "Barcelona, Spain"
+date: 2021-11-03
+language: en
+notes: "2021-11-03_SIMBa.pdf"
+abstract: In higher category theory, $\infty$-groupoids are $\infty$-categories whose morphisms are weakly invertible at all orders. Every topological space has an associated $\infty$-groupoid, named its fundamental $\infty$-groupoid, which encodes the information of higher paths over the space. The statement that every space can be recovered up to homotopy from its fundamental $\infty$-groupoid is known as Grothendieck’s homotopy hypothesis. In this presentation, we choose a model of $\infty$-categories based on topologically enriched categories, and discuss the homotopy hypothesis in this context.
+# time: "12:20"
+# speaker: TODO
+# speakerHomepage: TODO
+# institution: TODO
+# institutionHomepage: TODO
+# venue: TODO
+# video: TODO

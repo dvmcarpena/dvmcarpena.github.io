@@ -1,31 +1,9 @@
 ---
-layout: compress
+layout: base
 ---
 
 {% include base_path %}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    <div>
-    {{ content }}
-    </div>
-
-    <div class="page__footer">
-      <footer>
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
-</html>
+<div id="main" role="main">
+  {{ content }}
+</div>

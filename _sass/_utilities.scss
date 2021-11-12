@@ -106,19 +106,6 @@ body:hover .visually-hidden button {
 
 
 /*
-   Alignment
-   ========================================================================== */
-
-/* clearfix */
-
-.cf { clear: both; }
-
-.wrapper {
-  // @include container();
-}
-
-
-/*
    Images
    ========================================================================== */
 
@@ -342,25 +329,6 @@ body:hover .visually-hidden button {
             transform: rotate3d(0,0,1,-45deg);
   }
 }
-
-
-/*
-   Sticky, fixed to top content
-   ========================================================================== */
-
-.sticky {
-  @include breakpoint($large) {
-    @include clearfix();
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2em;
-
-    > * {
-      display: block;
-    }
-  }
-}
-
 
 /*
    Wells

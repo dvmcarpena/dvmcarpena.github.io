@@ -1,9 +1,7 @@
 ---
-permalink: /terms/
 title: "Terms and Privacy Policy"
+permalink: /terms/
 modified: 2016-06-06
-redirect_from: 
-  - /terms.html
 ---
 
 {% include base_path %}
