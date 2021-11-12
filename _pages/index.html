@@ -166,8 +166,8 @@ title: ""
 <section id="talks" class="home-section">
   <h2>Talks</h2>
   <ul class="details-list">
-    {% for talk_hash in site.data.talks reversed %}
-      {% assign talk = talk_hash[1] %}
+    {% assign talks = site.talks | sort: "date" | reverse %}
+    {% for talk in talks %}
       <!-- <li><strong>{{ talk.title }}</strong>, <em>{{ talk.event }}</em> ({{ talk.date | date: "%b. %Y" }})</li> -->
       <li>
         <details>
@@ -188,8 +188,9 @@ title: ""
                 </span>
               {% endif %}
             </p>
-            {% if talk.abstract %}
-              <p>{{ talk.abstract }}</p>
+            {% assign content = talk.content | strip_newlines | strip %}
+            {% if content != "" %}
+              <p>{{ talk.content }}</p>
             {% endif %}
           </div>
         </details>

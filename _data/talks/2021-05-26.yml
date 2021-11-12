@@ -1,7 +1,0 @@
-title: "$p$-adic model structure on simplicial sets"
-event: "Spring 2021 seminar of the Topology Group at Universitat de Barcelona"
-location: "Barcelona, Spain"
-date: 2021-05-26
-language: en
-notes: 2021-05-26_Seminari-topologia-algebraica-ub.pdf
-abstract: Left Bousfield localization of model categories is one of the possible ways to create new model structures from existing ones. Under certain assumptions on the original model category, a left Bousfield localization always exists. This construction could be sum up informally as taking the same class of cofibrations but adding new weak equivalences. The first appearance of this construction was in the context of localizing simplicial sets with respect to a generalized homology theory, by Bousfield. When we localize a model structure over simplicial sets with respect to a homology theory \(E_*\), we “lose” homotopical information for every simplicial set, but retaining the \(E_*\)-accessible parts. The main examples of this type of constructions are the rational model structure and the \(p\)-adic model structure over simplicial sets.

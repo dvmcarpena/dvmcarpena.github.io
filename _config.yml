@@ -69,7 +69,9 @@ keep_files:
   - .svn
 
 # Collections
-collections: []
+collections:
+  talks:
+    output: false
 # permalink: /:categories/:title/
 defaults:
   # _pages
