@@ -190,7 +190,7 @@ title: ""
             </p>
             {% assign content = talk.content | strip_newlines | strip %}
             {% if content != "" %}
-              <p>{{ talk.content }}</p>
+              {{ talk.content }}
             {% endif %}
           </div>
         </details>
