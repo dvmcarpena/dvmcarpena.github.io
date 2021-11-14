@@ -20,7 +20,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dvmcarpena/dvmcarpena.github.io"
 
 # SEO Related
-google_site_verification :
+google_site_verification : "T3-guCHPKUgRfhYvs5sqbhb29_VYdMkcz7j5kdhae8I"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
