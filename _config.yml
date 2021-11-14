@@ -41,6 +41,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - assets/js/pwa.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -57,6 +58,7 @@ exclude:
   - assets/js/_main.js
   - assets/sources
   - assets/images/icon/sources
+  - assets/dependencies/katex
   - config
   - gulpfile.js
   - log

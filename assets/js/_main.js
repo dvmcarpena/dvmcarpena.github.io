@@ -75,3 +75,21 @@ document.addEventListener("DOMContentLoaded", function() {
    // Init
    updateNav();
 });
+
+// function isPwa() {
+//    var displayModes = ["fullscreen", "standalone", "minimal-ui"];
+//    return displayModes.some(
+//        (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches
+//    ); 
+// }
+
+// if (isPwa()) {
+//    console.log("PWA mode on")
+//    if('serviceWorker' in navigator) {
+//        navigator.serviceWorker.register('./assets/js/pwa.min.js');
+//    };
+// }
+
+if ('serviceWorker' in navigator) {
+   navigator.serviceWorker.register('/assets/js/pwa.js');
+ }

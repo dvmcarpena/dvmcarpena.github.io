@@ -36,10 +36,21 @@
 
 <!-- BEGIN - Lazy loaded CSS files -->
 
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+<!-- <link rel="preload" href="{{ base_path }}/assets/dependencies/katex/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2">
+<link rel="preload" href="{{ base_path }}/assets/dependencies/katex/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2"> -->
+
 <link rel="preload" href="{{ base_path }}/assets/css/academicons.min.css" as="style" onload="this.rel='stylesheet'">
 <link rel="preload" href="{{ base_path }}/assets/css/fontawesome.min.css" as="style" onload="this.rel='stylesheet'">
+<!-- <link rel="preload" href="{{ base_path }}/assets/dependencies/katex/katex.min.css" as="style" onload="this.rel='stylesheet'"> -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style" onload="this.rel='stylesheet'"  crossorigin="anonymous">
 
-<noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.min.css"></noscript>
-<noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.min.css"></noscript>
+<noscript>
+  <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="{{ base_path }}/assets/dependencies/katex/katex.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" crossorigin="anonymous">
+</noscript>
 
 <!-- END   - Lazy loaded CSS files -->
