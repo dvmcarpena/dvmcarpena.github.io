@@ -41,7 +41,7 @@ include:
   - .htaccess
   - _pages
   - files
-  - sw.js
+  # - sw.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
