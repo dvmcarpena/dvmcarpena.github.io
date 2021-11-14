@@ -91,5 +91,5 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 if ('serviceWorker' in navigator) {
-   navigator.serviceWorker.register('/assets/js/pwa.js');
+   navigator.serviceWorker.register('/sw.js');
  }
