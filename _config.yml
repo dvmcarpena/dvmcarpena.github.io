@@ -19,23 +19,6 @@ url                      : https://dvmcarpena.com # the base hostname & protocol
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dvmcarpena/dvmcarpena.github.io"
 
-# SEO Related
-google_site_verification : "T3-guCHPKUgRfhYvs5sqbhb29_VYdMkcz7j5kdhae8I"
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-# Social Sharing
-twitter:
-  username               : "dvmcarpena"
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links                  : # An array of links to social media profiles
-
 # Reading Files
 include:
   - .htaccess
