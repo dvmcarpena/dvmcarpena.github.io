@@ -4,13 +4,20 @@
 
 // @include border-box-sizing;
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 html {
   /* apply a natural box layout model to all elements */
-  box-sizing: border-box;
   background-color: $background-color;
   font-size: 16px;
 
-  @include breakpoint($medium) {
+  @media screen and (min-width: $medium) {
     font-size: 18px;
   }
 
@@ -73,7 +80,11 @@ a {
 /* Apply focus state */
 
 a:focus {
-  @extend %tab-focus;
+  /* Default*/
+  outline: thin dotted $warning-color;
+  /* Webkit*/
+  outline: 5px auto $warning-color;
+  outline-offset: -2px;
 }
 
 /* Remove outline from links */

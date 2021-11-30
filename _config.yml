@@ -20,11 +20,11 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dvmcarpena/dvmcarpena.github.io"
 
 # Reading Files
+theme: null
 include:
   - .htaccess
   - _pages
   - files
-  # - sw.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -54,8 +54,11 @@ keep_files:
   - .svn
 
 # Collections
+collections_dir: "_collections"
 collections:
   talks:
+    output: false
+  posters:
     output: false
 # permalink: /:categories/:title/
 defaults:

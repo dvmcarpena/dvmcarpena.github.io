@@ -91,20 +91,8 @@ title: ""
             {% if author.weibo %}
               <li><a href="https://www.weibo.com/{{ author.weibo }}"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i> Weibo</a></li>
             {% endif %}
-            {% if author.flickr %}
-              <li><a href="https://www.flickr.com/{{ author.flickr }}"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i> Flickr</a></li>
-            {% endif %}
-            {% if author.codepen %}
-              <li><a href="https://codepen.io/{{ author.codepen }}"><i class="fab fa-fw fa-codepen" aria-hidden="true"></i> CodePen</a></li>
-            {% endif %}
-            {% if author.vine %}
-              <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
-            {% endif %}
             {% if author.googlescholar %}
               <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
-            {% endif %}
-            {% if author.pubmed %}
-              <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
             {% endif %}
             {% if author.orcid %}
               <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
@@ -202,8 +190,8 @@ title: ""
 <section id="posters" class="home-section">
   <h2>Posters</h2>
   <ul class="details-list">
-    {% for poster_hash in site.data.posters reversed %}
-      {% assign poster = poster_hash[1] %}
+    {% assign posters = site.posters | sort: "date" | reverse %}
+    {% for poster in posters %}
       <!-- <li><strong>{{ poster.title }}</strong>, <em>{{ poster.event }}</em> ({{ poster.date | date: "%b. %Y" }})</li> -->
       <li>
         <details>
@@ -220,12 +208,13 @@ title: ""
               {% if poster.file %}
                 <span>
                   <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
-                  <a href="{{ poster.file | prepend: "/files/posters/" | prepend: base_path }}">Document</a>
+                  <a href="{{ poster.file | prepend: "/files/posters/" | prepend: base_path }}">Notes</a>
                 </span>
               {% endif %}
             </p>
-            {% if poster.abstract %}
-              <p>{{ poster.abstract }}</p>
+            {% assign content = poster.content | strip_newlines | strip %}
+            {% if content != "" %}
+              {{ poster.content }}
             {% endif %}
           </div>
         </details>

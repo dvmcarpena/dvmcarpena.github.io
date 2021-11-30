@@ -43,7 +43,7 @@
     ],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"appPort": [4000],
+	"appPort": ["4000:4000"],
 
     // Commands to run after the container is created.
     // "postCreateCommand": "sudo cp -r /root/.ssh-localhost ~ && sudo chown -R $(id -u):$(id -g) ~/.ssh-localhost && mv ~/.ssh-localhost ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",

@@ -112,7 +112,11 @@ blockquote {
 
 a {
   &:focus {
-    @extend %tab-focus;
+    /* Default*/
+    outline: thin dotted $warning-color;
+    /* Webkit*/
+    outline: 5px auto $warning-color;
+    outline-offset: -2px;
   }
 
   &:hover,
@@ -207,7 +211,7 @@ figure {
   &.half {
     > a,
     > img {
-      @include breakpoint($small) {
+      @media screen and (min-width: $small) {
         width: calc(50% - 0.5em);
       }
     }
@@ -220,7 +224,7 @@ figure {
   &.third {
     > a,
     > img {
-      @include breakpoint($small) {
+      @media screen and (min-width: $small) {
         width: calc(33.3333% - 0.5em);
       }
     }
@@ -308,7 +312,7 @@ nav {
    Global animation transition
    ========================================================================== */
 
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
+b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }

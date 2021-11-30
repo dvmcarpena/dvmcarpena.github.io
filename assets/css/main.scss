@@ -10,13 +10,9 @@
  *
 */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
-@import "mixins";
-
 @import "reset";
 @import "base";
-
 @import "utilities";
 @import "animations";
 // @import "tables";
@@ -25,14 +21,10 @@
 @import "masthead";
 @import "navigation";
 @import "footer";
-// @import "syntax";
-
 // @import "forms";
-
 @import "page";
 @import "archive";
 @import "sidebar";
-
 @import "print";
 
 // .home-section:nth-child(odd) {

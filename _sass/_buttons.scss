@@ -114,22 +114,4 @@
     box-shadow: none;
     opacity: 0.65;
   }
-  
-  /* extra large button */
-
-  &--x-large {
-    font-size: $type-size-4;
-  }
-
-  /* large button */
-
-  &--large {
-    font-size: $type-size-5;
-  }
-
-  /* small button */
-
-  &--small {
-    font-size: $type-size-7;
-  }
 }
