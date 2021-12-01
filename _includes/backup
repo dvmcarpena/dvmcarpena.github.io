@@ -30,18 +30,6 @@
   
       </header>
     {% endunless %}
-
-    <section class="page__content" itemprop="text">
-      {{ content }}
-      {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-    </section>
-
-    <footer class="page__meta">
-      {% if site.data.ui-text[site.locale].meta_label %}
-        <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-      {% endif %}
-    </footer>
-
   </div>
   
 </article> -->
@@ -65,17 +53,6 @@
 
       </header>
     {% endunless %}
-
-    <section class="page__content" itemprop="text">
-      {{ content }}
-      {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-    </section>
-
-    <footer class="page__meta">
-      {% if site.data.ui-text[site.locale].meta_label %}
-        <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-      {% endif %}
-    </footer>
   </div>
   
 </article> -->
@@ -126,7 +103,7 @@
           {% if teaser contains "://" %}
             "{{ teaser }}"
           {% else %}
-            "{{ teaser | prepend: "/assets/images/" | prepend: base_path }}"
+            "{{ teaser | prepend: "/assets/images/" | prepend: site.url }}"
           {% endif %}
           alt="">
       </div>
@@ -134,9 +111,9 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ site.url }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ site.url }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
 

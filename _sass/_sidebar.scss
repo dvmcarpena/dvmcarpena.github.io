@@ -58,17 +58,9 @@
 }
 
 .author__urls {
-  // display: none;
-  // position: absolute;
-  // right: 0;
   margin-top: 15px;
-  // padding: 10px;
   list-style-type: none;
-  // border: 1px solid $border-color;
-  // border-radius: $border-radius;
-  // background: #fff;
   z-index: -1;
-  // box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
   
   display: block;
@@ -78,16 +70,6 @@
   border: 0;
   background: transparent;
   box-shadow: none;
-
-  // @include breakpoint($large) {
-  //   display: block;
-  //   position: relative;
-  //   margin: 0;
-  //   padding: 0;
-  //   border: 0;
-  //   background: transparent;
-  //   box-shadow: none;
-  // }
 
   &:before {
     display: block;
@@ -100,11 +82,6 @@
     border-width: 0 10px 10px;
     border-color: $border-color transparent;
     z-index: 0;
-    // display: none;
-
-    // @include breakpoint($large) {
-    //   display: none;
-    // }
   }
 
   &:after {
@@ -118,11 +95,6 @@
     border-width: 0 10px 10px;
     border-color: #fff transparent;
     z-index: 1;
-    // display: none;
-
-    // @include breakpoint($large) {
-    //   display: none;
-    // }
   }
 
   li {

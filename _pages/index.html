@@ -15,7 +15,7 @@ title: ""
         {% if author.avatar contains "://" %}
           {% assign src_img =  author.avatar %}
         {% else %}
-          {% assign src_img = author.avatar | prepend: "/assets/images/" | prepend: base_path %}
+          {% assign src_img = author.avatar | prepend: "/assets/images/" | prepend: site.url %}
         {% endif %}
         
         <picture>
@@ -172,7 +172,7 @@ title: ""
               {% if talk.notes %}
                 <span>
                   <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
-                  <a href="{{ talk.notes | prepend: "/files/talks/" | prepend: base_path }}">Notes</a>
+                  <a href="{{ talk.notes | prepend: "/files/talks/" | prepend: site.url }}">Notes</a>
                 </span>
               {% endif %}
             </p>
@@ -208,7 +208,7 @@ title: ""
               {% if poster.file %}
                 <span>
                   <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
-                  <a href="{{ poster.file | prepend: "/files/posters/" | prepend: base_path }}">Notes</a>
+                  <a href="{{ poster.file | prepend: "/files/posters/" | prepend: site.url }}">Notes</a>
                 </span>
               {% endif %}
             </p>

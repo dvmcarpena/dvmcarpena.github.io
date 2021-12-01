@@ -13,16 +13,6 @@
   visibility: hidden;
 }
 
-/* for preloading images */
-
-.load {
-  display: none;
-}
-
-.transparent {
-  opacity: 0;
-}
-
 /* https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html */
 
 .visually-hidden,
@@ -60,52 +50,9 @@ body:hover .visually-hidden button {
   box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
 
-
-/*
-   Skip links
-   ========================================================================== */
-
-.skip-link {
-  position: fixed;
-  z-index: 20;
-  margin: 0;
-  font-family: $sans-serif;
-  white-space: nowrap;
-}
-
-.skip-link li {
-  height: 0;
-  width: 0;
-  list-style: none;
-}
-
-/*
-   Images
-   ========================================================================== */
-
-
-/* image align center */
-
-.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*
    Icons
    ========================================================================== */
-
-.icon {
-  display: inline-block;
-  fill: currentColor;
-  width: 1em;
-  height: 1.1em;
-  line-height: 1;
-  position: relative;
-  top: -0.1em;
-  vertical-align: middle;
-}
 
 /* social icons*/
 

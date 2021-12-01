@@ -1,10 +1,8 @@
-{% include base_path %}
-
 <meta charset="utf-8">
 
 {% include seo.html %}
 
-<!-- <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed"> -->
+<!-- <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ site.url }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed"> -->
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -30,7 +28,7 @@
 
 <!-- BEGIN - Strictly loaded CSS files -->
 
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
 
 <!-- END   - Strictly loaded CSS files -->
 
@@ -38,29 +36,29 @@
 
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
-<!-- <link rel="preload" href="{{ base_path }}/assets/dependencies/katex/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2">
-<link rel="preload" href="{{ base_path }}/assets/dependencies/katex/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2"> -->
-<!-- <link rel="preload" href="{{ base_path }}/assets/fonts/academicons.woff" as="font" type="font/woff">
-<link rel="preload" href="{{ base_path }}/assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2">
-<link rel="preload" href="{{ base_path }}/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2"> -->
+<!-- <link rel="preload" href="{{ site.url }}/assets/dependencies/katex/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2">
+<link rel="preload" href="{{ site.url }}/assets/dependencies/katex/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2"> -->
+<!-- <link rel="preload" href="{{ site.url }}/assets/fonts/academicons.woff" as="font" type="font/woff">
+<link rel="preload" href="{{ site.url }}/assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2">
+<link rel="preload" href="{{ site.url }}/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2"> -->
 
-<link rel="preload" href="{{ base_path }}/assets/css/academicons.min.css" as="style" onload="this.rel='stylesheet'">
-<link rel="preload" href="{{ base_path }}/assets/css/fontawesome.css" as="style" onload="this.rel='stylesheet'">
-<!-- <link rel="preload" href="{{ base_path }}/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'"> -->
-<!-- <link rel="preload" href="{{ base_path }}/assets/css/fontawesome.min.css" as="style" onload="this.rel='stylesheet'">
-<link rel="preload" href="{{ base_path }}/assets/css/brands.min.css" rel="stylesheet" onload="this.rel='stylesheet'">
-<link rel="preload" href="{{ base_path }}/assets/css/solid.min.css" rel="stylesheet" onload="this.rel='stylesheet'"> -->
-<!-- <link rel="preload" href="{{ base_path }}/assets/dependencies/katex/katex.min.css" as="style" onload="this.rel='stylesheet'"> -->
+<link rel="preload" href="{{ site.url }}/assets/css/academicons.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="{{ site.url }}/assets/css/fontawesome.css" as="style" onload="this.rel='stylesheet'">
+<!-- <link rel="preload" href="{{ site.url }}/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'"> -->
+<!-- <link rel="preload" href="{{ site.url }}/assets/css/fontawesome.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="{{ site.url }}/assets/css/brands.min.css" rel="stylesheet" onload="this.rel='stylesheet'">
+<link rel="preload" href="{{ site.url }}/assets/css/solid.min.css" rel="stylesheet" onload="this.rel='stylesheet'"> -->
+<!-- <link rel="preload" href="{{ site.url }}/assets/dependencies/katex/katex.min.css" as="style" onload="this.rel='stylesheet'"> -->
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style" onload="this.rel='stylesheet'"  crossorigin="anonymous">
 
 <noscript>
-  <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.min.css">
-  <link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css">
-  <!-- <link rel="stylesheet" href="{{ base_path }}/assets/css/all.min.css"> -->
-  <!-- <link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="{{ base_path }}/assets/css/brands.min.css">
-  <link rel="stylesheet" href="{{ base_path }}/assets/css/solid.min.css"> -->
-  <!-- <link rel="stylesheet" href="{{ base_path }}/assets/dependencies/katex/katex.min.css"> -->
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/fontawesome.css">
+  <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/all.min.css"> -->
+  <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/brands.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/solid.min.css"> -->
+  <!-- <link rel="stylesheet" href="{{ site.url }}/assets/dependencies/katex/katex.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" crossorigin="anonymous">
 </noscript>
 
