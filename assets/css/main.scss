@@ -14,15 +14,10 @@
 @import "reset";
 @import "base";
 @import "utilities";
-@import "animations";
-// @import "tables";
-@import "notices";
 @import "masthead";
 @import "navigation";
 @import "footer";
-// @import "forms";
 @import "page";
-@import "archive";
 @import "sidebar";
 @import "print";
 
@@ -172,4 +167,12 @@ body {
 
 #site-nav {
     min-width: 285px;
+}
+
+.talk-data > span {
+    font-size: 0.9em;
+}
+
+.talk-data > span > i {
+    margin-right: 0.2em;
 }
