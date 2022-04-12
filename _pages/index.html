@@ -28,7 +28,7 @@ title: ""
         <h2>About me</h2>
 
         <p>
-          I'm an adjunct lecturer at the University of Barcelona, recently graduated from a Master in advanced mathematics.
+          I'm an assistant professor at the University of Barcelona, recently graduated from a Master in advanced mathematics.
           In the coming months I will begin my PhD in Mathematics at the University of Barcelona.
         </p>
         
@@ -142,7 +142,7 @@ title: ""
   <h2>Teaching</h2>
   <ul>
     <li>
-      <strong>Adjunct lecturer</strong>, <em>University of Barcelona</em> (Sep. 2021 - Present)
+      <strong>Assistant Professor</strong>, <em>University of Barcelona</em> (Sep. 2021 - Present)
     </li>
   </ul>
 </section>
@@ -158,21 +158,35 @@ title: ""
     {% for talk in talks %}
       <!-- <li><strong>{{ talk.title }}</strong>, <em>{{ talk.event }}</em> ({{ talk.date | date: "%b. %Y" }})</li> -->
       <li>
+
+        {% assign talk_notes-label = "Notes" %}
+        {% assign talk_notes-url = talk.notes | prepend: "/files/talks/" | prepend: site.url %}
         <details>
           <summary>
             <time datetime="{{ talk.date | date_to_xmlschema }}">{{ talk.date | date: "%b. %Y" }}</time>. <strong>{{ talk.title }}</strong>, <em>{{ talk.event }}</em>
           </summary>
           <div>
-            <p>
+            <p class="talk-data">
               {% if talk.location %}
                 <span>
                   <i class="fa fa-fw fa-map-marker-alt" aria-hidden="true"></i>{{ talk.location }}
                 </span>
               {% endif %}
+              {% if talk.language %}
+                <span>
+                  <i class="fa fa-fw fa-language" aria-hidden="true"></i>
+                  {% if talk.language == "ca" %}
+                    Catalan
+                  {% elsif talk.language == "es" %}
+                    Spanish
+                  {% else %}
+                    English
+                  {% endif %}
+                </span>
+              {% endif %}
               {% if talk.notes %}
                 <span>
-                  <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i>
-                  <a href="{{ talk.notes | prepend: "/files/talks/" | prepend: site.url }}">Notes</a>
+                  <i class="fa fa-fw fa-file-pdf" aria-hidden="true"></i><a href="{{ talk_notes-url }}">{{ talk_notes-label }}</a>
                 </span>
               {% endif %}
             </p>
@@ -199,10 +213,22 @@ title: ""
             <time datetime="{{ poster.date | date_to_xmlschema }}">{{ poster.date | date: "%b. %Y" }}</time>. <strong>{{ poster.title }}</strong>, <em>{{ poster.event }}</em>
           </summary>
           <div>
-            <p>
+            <p class="talk-data">
               {% if poster.location %}
                 <span>
                   <i class="fa fa-fw fa-map-marker-alt" aria-hidden="true"></i>{{ poster.location }}
+                </span>
+              {% endif %}
+              {% if poster.language %}
+                <span>
+                  <i class="fa fa-fw fa-language" aria-hidden="true"></i>
+                  {% if poster.language == "ca" %}
+                    Catalan
+                  {% elsif poster.language == "es" %}
+                    Spanish
+                  {% else %}
+                    English
+                  {% endif %}
                 </span>
               {% endif %}
               {% if poster.file %}

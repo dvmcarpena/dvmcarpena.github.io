@@ -747,7 +747,7 @@ readers do not read off random characters that represent icons */
 // .#{$fa-css-prefix}-kiwi-bird:before { content: fa-content($fa-var-kiwi-bird); }
 // .#{$fa-css-prefix}-korvue:before { content: fa-content($fa-var-korvue); }
 // .#{$fa-css-prefix}-landmark:before { content: fa-content($fa-var-landmark); }
-// .#{$fa-css-prefix}-language:before { content: fa-content($fa-var-language); }
+.#{$fa-css-prefix}-language:before { content: fa-content($fa-var-language); }
 // .#{$fa-css-prefix}-laptop:before { content: fa-content($fa-var-laptop); }
 // .#{$fa-css-prefix}-laptop-code:before { content: fa-content($fa-var-laptop-code); }
 // .#{$fa-css-prefix}-laptop-house:before { content: fa-content($fa-var-laptop-house); }
