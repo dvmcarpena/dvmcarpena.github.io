@@ -1,9 +1,4 @@
 <!-- begin SEO -->
-{% if site.url %}
-  {% assign seo_url = site.url | append: site.baseurl %}
-{% endif %}
-{% assign seo_url = seo_url | default: site.github.url %}
-
 {% if page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
@@ -37,9 +32,9 @@
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
-{% if seo_url %}
-  <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
-  <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
+{% if site.url %}
+  <link rel="canonical" href="{{ page.url | prepend: site.url | replace: "/index.html", "/" }}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url | replace: "/index.html", "/" }}">
 {% endif %}
 
 {% if page.excerpt %}
@@ -83,7 +78,7 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
+      "url": {{ site.url | jsonify }},
       "logo": {{ site.data.seo.og_image | prepend: "/assets/images/" | prepend: site.url | jsonify }}
     }
   </script>
@@ -95,7 +90,7 @@
       "@context" : "http://schema.org",
       "@type" : "{% if site.data.seo.social.type %}{{ site.data.seo.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.data.seo.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
+      "url" : {{ site.url | jsonify }},
       "sameAs" : {{ site.data.seo.social.links | jsonify }}
     }
   </script>
@@ -105,7 +100,6 @@
   <meta name="google-site-verification" content="{{ site.data.seo.google_site_verification }}" />
 {% endif %}
 {% if site.data.seo.bing_site_verification %}
-  <!-- <meta name="msvalidate.01" content="{{ site.data.seo.bing_site_verification }}"> -->
   <meta name="msvalidate.01" content="{{ site.data.seo.bing_site_verification }}" />
 {% endif %}
 {% if site.data.seo.alexa_site_verification %}
