@@ -26,8 +26,6 @@ include:
   - _pages
   - files
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -37,17 +35,14 @@ exclude:
   - Gruntfile.js
   - LICENSE
   - README
-  - Rakefile
   - assets/js/_main.js
   - assets/sources
   - assets/images/icon/sources
-  - assets/dependencies/katex
   - config
   - gulpfile.js
   - log
   - node_modules
   - package.json
-  - tmp
   - vendor
 keep_files:
   - .git
@@ -77,13 +72,12 @@ defaults:
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
-  ignore:
-    envs: development
 
 # Sass/SCSS
+# - http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 # Plugins
 plugins:

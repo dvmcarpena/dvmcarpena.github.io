@@ -1,6 +1,7 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+
 html {
   /* sticky footer fix */
   position: relative;
@@ -257,14 +258,6 @@ figcaption {
   }
 }
 
-
-/* Fix IE9 SVG bug */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-
 /*
    Navigation lists
    ========================================================================== */
@@ -306,13 +299,4 @@ nav {
   li ol {
     margin-top: 0;
   }
-}
-
-/*
-   Global animation transition
-   ========================================================================== */
-
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"] {
-  -webkit-transition: $global-transition;
-  transition: $global-transition;
 }
