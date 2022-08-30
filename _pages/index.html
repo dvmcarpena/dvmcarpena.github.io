@@ -121,15 +121,11 @@ title: ""
 <section id="education" class="home-section">
   <h2>Education</h2>
   <ul>
+    {% for education in site.data.educations %}
     <li>
-      <strong>Master in Advanced Mathematics</strong>, <em>University of Barcelona</em> (2020 - 2021)
+      <strong>{{ education.name }}</strong>, <em>{{ education.institution }}</em> ({{ education.from }} - {{ education.to }})
     </li>
-    <li>
-      <strong>Degree in Mathematics</strong>, <em>University of Barcelona</em> (2014 - 2020)
-    </li>
-    <li>
-      <strong>Degree in Computer Science</strong>, <em>University of Barcelona</em> (2014 - 2020)
-    </li>
+    {% endfor %}
   </ul>
 </section>
 
