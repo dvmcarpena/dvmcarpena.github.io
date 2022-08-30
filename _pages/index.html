@@ -107,15 +107,11 @@ title: ""
 
         <h3>Research interests:</h3>
         <ul>
+          {% for interest in site.data.interests %}
           <li>
-            Higher category theory
+            {{ interest.interest }}
           </li>
-          <li>
-            Synthetic homotopy theory
-          </li>
-          <li>
-            Homotopy type theory
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -147,6 +143,7 @@ title: ""
 </section>
 
 <!-- <section id="publications" class="home-section">
+  <h2>Publications and Preprints</h2>
   Bachelor Thesis
 </section> -->
 
