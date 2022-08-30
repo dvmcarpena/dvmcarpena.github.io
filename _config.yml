@@ -11,10 +11,10 @@ timezone                 : Europe/Madrid
 encoding                 : "utf-8"
 
 # Site Settings
-title                    : "David Martínez Carpena"
-title_separator          : "-"
 name                     : &name "David Martínez Carpena"
-description              : &description "I'm an adjunct lecturer at the University of Barcelona, recently graduated from a Master in advanced mathematics."
+description              : "PhD student and teaching assistant at the University of Barcelona, working on topics related to category theory, homotopy theory and homotopy type theory."
+title                    : *name
+title_separator          : "-"
 url                      : https://dvmcarpena.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dvmcarpena/dvmcarpena.github.io"

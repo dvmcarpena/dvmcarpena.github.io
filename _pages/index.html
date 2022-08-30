@@ -21,15 +21,14 @@ title: ""
         <picture>
           <source type="image/avif" srcset="{{ src_img | append: '.avif' }}">
           <source type="image/webp" srcset="{{ src_img | append: '.webp' }}">
-          <img src="{{ src_img | append: '.jpg' }}" width="163" height="200" class="author__avatar" alt="{{ author.name }}">
+          <img src="{{ src_img | append: '.jpg' }}" width="163" height="200" class="author__avatar" alt="{{ site.name }} profile picture">
         </picture>
       </div>
       <div class="aboutme">
         <h2>About me</h2>
 
         <p>
-          I'm an assistant professor at the University of Barcelona, recently graduated from a Master in advanced mathematics.
-          In the coming months I will begin my PhD in Mathematics at the University of Barcelona.
+          {{ author.description }}
         </p>
         
         <div class="author__urls-wrapper">
@@ -106,7 +105,7 @@ title: ""
           </ul>
         </div>
 
-        <h3>Interests:</h3>
+        <h3>Research interests:</h3>
         <ul>
           <li>
             Higher category theory

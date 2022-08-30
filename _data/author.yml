@@ -1,11 +1,10 @@
-name             : "David Martínez Carpena"
 avatar           : "profile"
-bio              : "I'm an adjunct lecturer at the University of Barcelona, recently graduated from a Master in advanced mathematics."
+description      : "I am a first year PhD student in algebraic topology at the University of Barcelona (UB), under the supervision of <a href='http://www.ub.edu/topologia/gutierrez/'>Javier J. Gutiérrez</a> and <a href='http://www.ub.edu/topologia/casacuberta/'>Carles Casacuberta</a>. In addition, I am a teaching assistant at UB since 2021, and one of the organizers of a youth mathematics seminar in Barcelona (<a href='https://www.ub.edu/simba/'>SIMBA</a>). Some time ago, I also co-founded <a href='https://hackinglliure.org/'>Hacking Lliure</a> with a group of friends, a non-profit association and hacking community."
 location         : "Barcelona, Spain"
 employer         :
 pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
 googlescholar    : # "http://yourfullgooglescholarurl.com"
-email            : "dvmcarpena [at] pm.me"
+email            : "dvmcarpena [at] pm [dot] me"
 researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
 uri              :
 bitbucket        :
