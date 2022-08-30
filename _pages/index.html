@@ -43,6 +43,9 @@ title: ""
             {% if author.github %}
               <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
             {% endif %}
+            {% if author.orcid %}
+              <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i> ORCID</a></li>
+            {% endif %}
             <!-- {% if author.location %}
               <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
             {% endif %}
@@ -93,9 +96,6 @@ title: ""
             {% endif %}
             {% if author.googlescholar %}
               <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
-            {% endif %}
-            {% if author.orcid %}
-              <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
             {% endif %}
             {% if author.impactstory %}
               <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
