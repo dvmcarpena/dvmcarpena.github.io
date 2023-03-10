@@ -7,6 +7,7 @@ modified: 2022-09-30
 # Introduction to Agda
 
 ## [Examples](https://dvmcarpena.com/files/agda-examples.zip)
+## [Modalities](https://dvmcarpena.com/files/modalities.agda)
 
 ## Agda Installation Guide
 
