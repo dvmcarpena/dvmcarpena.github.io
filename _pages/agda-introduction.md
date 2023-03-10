@@ -16,7 +16,7 @@ agda
 ```
 If you have Agda installed, you will see something similar to this output:
 
-![Agda command output](https://user-images.githubusercontent.com/63608428/224403083-c69691f9-b457-474c-bed6-c5b311d71025.png)
+![Agda command output](https://user-images.githubusercontent.com/63608428/224405548-a4e77105-8774-4a20-b437-b70d990584cd.png)
 
 In addition, you should see your installed Agda version written at the beginning of the output, in the above image, it is version 2.6.2.2.
 If the command gives an error, then you don't have Agda installed, and you should follow to the installation guide in step 2.
