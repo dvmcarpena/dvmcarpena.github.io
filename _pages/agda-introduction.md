@@ -9,17 +9,38 @@ modified: 2023-03-10
 ## [Examples](https://dvmcarpena.com/files/agda-examples.zip)
 ## [Modalities](https://dvmcarpena.com/files/modalities.agda)
 
+<!-- #### 1. Check if you have Agda installed and which version of it.
+
+Open a terminal (in Windows open Powershell), and type the following command:
+```shell
+agda
+```
+If you have Agda installed, you will see something similar to this output:
+![Agda command output](https://user-images.githubusercontent.com/63608428/224322372-56efbc1d-854d-49b6-b5da-f2e79cbfef54.png)
+In addition, your Agda version is written at the begining of the output, in the above image, it is version 2.6.2.2.
+If the command gives an error, then you don't have Agda installed, or your installation is broken.
+ The last version of Agda is 2.6.3, if you have any other version please consider upgrading your installation, following TODO.
+  If the command gives an error
+
+#### 2. If you don't have Agda install
+
+#### 3. If you have Agda install but with a version smalled than 2.6.3
+
+#### 4. Install your editor of choice
+
+#### 5. Install your editor of choice -->
+
+
 ## Install Agda
 
 ### 1. Windows
 
- 1. Open PowerShell as Administrator
- 2. Run the following command:
+ 1. Open PowerShell as Administrator and run the following command:
 ```shell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')) ; choco install cabal ghc emacs
 ```
- 3. Restart Powershell as Administrator
- 4. Run the following command:
+ 3. Close Powershell
+ 1. Open PowerShell as Administrator and run the following command:
 ```shell
 cabal update ; cabal install alex happy Agda ; agda-mode setup
 ```
@@ -34,6 +55,8 @@ cabal update ; cabal install alex happy Agda ; agda-mode setup
 ghcup install Agda
 agda-mode setup
 ```
+ 3. Install [VSCode](https://code.visualstudio.com)
+ 4. Install two extensions inside of VSCode: [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode) and [language-agda](https://marketplace.visualstudio.com/items?itemName=j-mueller.agda).
 
 ## Update Agda
 
@@ -43,11 +66,6 @@ agda-mode setup
  2. Run the following command:
 ```shell
 cabal update ; cabal install alex happy Agda ; agda-mode setup
-```
-
-```shell
-ghcup install Agda
-agda-mode setup
 ```
 
 ### 2. Linux
