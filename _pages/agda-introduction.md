@@ -4,7 +4,7 @@ permalink: /agda-intro/
 modified: 2023-03-10
 ---
 
-# Recommendations on the installation and management of Agda
+# Guide to the installation of Agda
 
 This document presents a set of steps which should enable the installation of Agda in a Windows or Linux system. If you installed Agda months ago using this steps, then there is also a guide on how to update Agda to the latest released version. Take into account that if you have already installed some software by other means (chocolately, ghc, cabal or agda), trying this method before a clean removal of the previously installed software could generate an unknown output. Use this guide responsibly, and feel free to contact me if you find any problem!
 
