@@ -1,0 +1,157 @@
+% Simple math macros
+\newcommand{\longto}{\longrightarrow}
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+\newcommand{\iso}{\cong}
+\newcommand{\cof}{\hookrightarrow}
+\newcommand{\longcof}{\lhook\joinrel\longrightarrow}
+\newcommand{\adjunc}{\rightleftarrows}
+\newcommand{\quotient}[2]{\hbox{\(#1\)}/\lower0.5ex\hbox{\(#2\)}}
+\newcommand{\colim}{\operatorname*{colim}}
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcommand\nnfootnote[1]{%
+  \begin{NoHyper}
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \end{NoHyper}
+}
+% \newcommand\restrict[1]{\raisebox{-.5ex}{$|$}_{#1}}
+\newcommand{\restrict}[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+}}
+
+% My general helpers
+\newcommand{\Infty}{$\infty$} % Used for correct article correction before an infinity sign
+\newcommand{\fitText}[2][1]{\resizebox{#1\textwidth}{!}{#2}}
+\newcommand{\fitMath}[2][1]{\resizebox{#1\textwidth}{!}{\(\displaystyle #2\)}}
+
+% Styles
+\newcommand{\CatStyle}[1]{{\bf #1}}
+
+% Examples of Sets
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Ncardinal}{\aleph_0}
+
+% Examples of Categories
+\newcommand{\Top}{\CatStyle{Top}}
+\newcommand{\sSet}{\CatStyle{sSet}}
+\newcommand{\Kan}{\CatStyle{Kan}}
+\newcommand{\qCat}{\CatStyle{qCat}}
+\newcommand{\Cat}{\CatStyle{Cat}}
+\newcommand{\Set}{\CatStyle{Set}}
+\newcommand{\TopCat}{\CatStyle{tCat}}
+\newcommand{\sSetCat}{\CatStyle{sCat}}
+% \newcommand{\eCat}[1]{\CatStyle{\text{-}}\Cat}
+% \newcommand{\TopCat}{\eCat{\Top}}
+% \newcommand{\sSetCat}{\eCat{\sSet}}
+% \newcommand{\Ctwo}{\mathbb{2}}
+
+% Examples of Infinity Categories
+\newcommand{\iCat}{\CatStyle{\infty\text{-}}\Cat}
+\newcommand{\Spaces}{\CatStyle{\mathcal{S}}}
+% \newcommand{\Spaces}{\CatStyle{\mathcal{Spaces}}}
+\newcommand{\Spectra}{\CatStyle{Sp}}
+\newcommand{\CatInitial}{\mathbb{0}}
+\newcommand{\CatTerminal}{\mathbb{1}}
+
+% Simplicial sets
+\newcommand{\sDelta}[1]{\Delta^{#1}}
+\newcommand{\Horn}[2]{\Lambda^{#1}_{#2}}
+% \newcommand{\dFace}[2]{\delta^{#1}_{#2}}
+% \newcommand{\dDege}[2]{\sigma^{#1}_{#2}}
+% \newcommand{\sFace}[2]{d^{#1}_{#2}}
+% \newcommand{\sDege}[2]{s^{#1}_{#2}}
+\newcommand{\dFace}[2]{\delta_{#2}}
+\newcommand{\dDege}[2]{\sigma_{#2}}
+\newcommand{\sFace}[2]{d_{#2}}
+\newcommand{\sDege}[2]{s_{#2}}
+\newcommand{\sMap}{\operatorname{Map}}
+\newcommand{\Spine}[1]{\operatorname{Sp} [{#1}]}
+
+% Categorical constructions
+\newcommand{\Obj}{\operatorname{Obj}}
+\newcommand{\Mor}{\operatorname{Mor}}
+\newcommand{\Op}[1]{{#1}^{\operatorname{op}}}
+\newcommand{\Inv}[1]{{#1}^{-1}}
+\newcommand{\Id}{\operatorname{id}}
+\newcommand{\Hom}[1]{\operatorname{Hom}_{#1}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Ev}{\operatorname{ev}}
+\newcommand{\Mod}{\operatorname{Mod}}
+\newcommand{\PSh}{\operatorname{PSh}}
+\newcommand{\Sh}{\operatorname{Sh}}
+\newcommand{\Cont}{\operatorname{Cont}}
+\newcommand{\Pres}{\operatorname{Pres}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Fconst}{\operatorname{const}}
+
+% QuasiCategorical constructions
+% \newcommand{\SHom}[3]{\operatorname{Hom}_{#1} (#2, #3)}
+\newcommand{\SHom}[3]{#2 \to #3}
+% \newcommand{\inSHom}[4]{{#4} \in \SHom{#1}{#2}{#3}}
+\newcommand{\inSHom}[4]{{#4}: \SHom{#1}{#2}{#3}}
+\newcommand{\QHom}[1]{#1}
+% \newcommand{\Map}{\operatorname{Map}}
+\newcommand{\Map}[1]{\operatorname{Map}_{#1}}
+% \newcommand{\Map}[1]{#1}
+\newcommand{\Nhc}{N^{hc}}
+\newcommand{\iconstD}[1]{\operatorname{const}^{#1}}
+\newcommand{\ho}{\operatorname{ho}}
+% \newcommand{\Ynd}[1][\bullet]{h_{#1}}
+% \newcommand{\coYnd}[1][\bullet]{h^{#1}}
+% \DeclareFontFamily{U}{min}{}
+% \DeclareFontShape{U}{min}{m}{n}{<-> udmj30}{}
+% \newcommand\yo{\!\text{\usefont{U}{min}{m}{n}\symbol{'207}}\!}
+% \newcommand{\Ynd}[1]{h_{#1}}
+% \newcommand{\coYnd}[1]{\Ynd{\Op{#1}}}
+\newcommand{\Ynd}[1]{h_{#1}}
+\newcommand{\coYnd}[1]{h^{#1}}
+% \newcommand{\Lan}[1]{{\rm Lan}_{#1}}
+% \newcommand{\Lan}[1]{{\rm Lan}_{#1}}
+\newcommand{\Lan}[1]{{(#1)}_!}
+% \newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\Fun}[3][]{\operatorname{Fun}^{#1} (#2, #3)}
+% \newcommand{\Fun}[2]{[#1, #2]}
+\newcommand{\FunInv}[3]{\operatorname{Fun}^{#3} (#1, #2)}
+\newcommand{\FunL}[2]{\operatorname{Fun}^L (#1, #2)}
+% \newcommand{\const}{\Delta}
+% \newcommand{\const}{\operatorname{\Delta}}
+\newcommand{\const}{\delta}
+% \newcommand{\const}{\operatorname{\delta}}
+% \newcommand{\const}{\operatorname{const}}
+% \newcommand{\Const}[1]{\operatorname{const}_{#1}}
+\newcommand{\Const}[1]{\operatorname{c}_{#1}}
+\newcommand{\Loc}{\operatorname{Loc}}
+% \newcommand{\Arrows}[1]{{#1}^{\to}}
+\newcommand{\InvIm}{\operatorname{Inv}}
+\newcommand{\eSat}[1]{\widehat{#1}}
+\newcommand{\coCones}[1]{{#1}^{\vartriangleright}}
+\newcommand{\Cones}[1]{{#1}^{\vartriangleleft}}
+\newcommand{\join}{\operatorname{\star}}
+\newcommand{\Slice}[2]{{#1}_{/#2}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\RelSlice}[2]{\Slice{(\Ynd{#1})}{#2}}
+
+% Variables
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\bL}{\mathbb{L}}
+\newcommand{\bC}{\mathbb{C}}
+
+\newcommand{\Deltabf}{\text{\boldmath$\Delta$}}
+\newcommand{\Gammabf}{\text{\boldmath$\Gamma$}}
+\newcommand{\Omegabf}{\text{\boldmath$\Omega$}}
