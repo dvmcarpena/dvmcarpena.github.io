@@ -112,7 +112,9 @@
 \newcommand{\coYnd}[1]{h^{#1}}
 % \newcommand{\Lan}[1]{{\rm Lan}_{#1}}
 % \newcommand{\Lan}[1]{{\rm Lan}_{#1}}
-\newcommand{\Lan}[1]{{(#1)}_!}
+% \newcommand{\Lan}[1]{{(#1)}_!}
+\newcommand{\Lan}[1]{\operatorname{Lan}}
+\newcommand{\LKan}[1]{{#1}_!}
 % \newcommand{\Fun}{\operatorname{Fun}}
 \newcommand{\Fun}[2]{\operatorname{Fun} (#1, #2)}
 % \newcommand{\Fun}[2]{[#1, #2]}
@@ -120,11 +122,13 @@
 \newcommand{\FunL}[2]{\operatorname{Fun}^L (#1, #2)}
 % \newcommand{\const}{\Delta}
 % \newcommand{\const}{\operatorname{\Delta}}
-\newcommand{\const}{\delta}
-% \newcommand{\const}{\operatorname{\delta}}
+% \newcommand{\const}{\delta}
+\newcommand{\const}{\operatorname{\delta}}
+\newcommand{\Const}[1]{\operatorname{\delta} #1}
 % \newcommand{\const}{\operatorname{const}}
+% \newcommand{\const}[1]{\Const{#1}}
 % \newcommand{\Const}[1]{\operatorname{const}_{#1}}
-\newcommand{\Const}[1]{\operatorname{c}_{#1}}
+% \newcommand{\Const}[1]{\operatorname{c}_{#1}}
 \newcommand{\Loc}{\operatorname{Loc}}
 % \newcommand{\Arrows}[1]{{#1}^{\to}}
 \newcommand{\InvIm}{\operatorname{Inv}}
@@ -134,7 +138,10 @@
 \newcommand{\join}{\operatorname{\star}}
 \newcommand{\Slice}[2]{{#1}_{/#2}}
 \newcommand{\pr}{\operatorname{pr}}
-\newcommand{\RelSlice}[2]{\Slice{(\Ynd{#1})}{#2}}
+% \newcommand{\RelSlice}[2]{\Slice{(\Ynd{#1})}{#2}}
+\newcommand{\RelSlice}[2]{\Slice{#1}{#2}}
+% \newcommand{\Iso}{\mathbb{I}}
+\newcommand{\Iso}{\operatorname{Iso}}
 
 % Variables
 \newcommand{\cA}{\mathcal{A}}
@@ -142,6 +149,7 @@
 \newcommand{\cC}{\mathcal{C}}
 \newcommand{\cD}{\mathcal{D}}
 \newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
 \newcommand{\cH}{\mathcal{H}}
 \newcommand{\cI}{\mathcal{I}}
 \newcommand{\cK}{\mathcal{K}}
