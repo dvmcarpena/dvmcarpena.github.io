@@ -1,4 +1,6 @@
 _site/
 node_modules
-Gemfile.lock
-package-lock.json
+vendor
+.bundle
+.envrc
+.direnv
