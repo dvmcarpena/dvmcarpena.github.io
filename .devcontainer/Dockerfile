@@ -14,7 +14,7 @@ ENV USERNAME=jekyll
 #     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Install development packages
-RUN apk update && apk add \
+RUN apk update && apk add --no-cache \
     # development packages
     ruby-dev \
     gcc \
@@ -27,7 +27,7 @@ RUN apk update && apk add \
     libxml2-dev \
     libgcrypt-dev \
     libxslt-dev \
-    python \
+    python3 \
     # pushing to git via ssh
     openssh \
     # permissions to install packages
