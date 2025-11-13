@@ -53,6 +53,8 @@ collections_dir: "_collections"
 collections:
   talks:
     output: false
+  publications:
+    output: false
   posters:
     output: false
 # permalink: /:categories/:title/

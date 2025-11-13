@@ -138,10 +138,49 @@ title: ""
   </ul>
 </section>
 
-<!-- <section id="publications" class="home-section">
+<section id="publications" class="home-section">
   <h2>Publications and Preprints</h2>
-  Bachelor Thesis
-</section> -->
+  <ul>
+    {% assign publications = site.publications | sort: "date" | reverse %}
+    {% for publication in publications %}
+    <li>
+      <time datetime="{{ publication.date | date_to_xmlschema }}">{{ publication.date | date: "%b. %Y" }}</time>. 
+      <em>
+        {% assign first_authors = publication.authors | pop %}
+        {% for author in first_authors %}
+          {{ author }};
+        {% endfor %}
+        {{ publication.authors | last }}
+      </em>
+      {% if publication.type != "Thesis" %}<br>{% else %}; {% endif %}
+      <strong>{{ publication.title }}</strong><br>
+      {% if publication.type == "Article" %}
+        {{ publication.journal }}, 
+        Vol. {{ publication.volume }},
+      {% endif %}
+      {% if publication.type == "Thesis" %}
+        {{ publication.kind }} supervised by 
+        {% assign first_supervisors = publication.supervisors | pop | pop %}
+        {% for supervisor in first_supervisors %}
+          {{ supervisor }}, 
+        {% endfor %}
+        {% assign second_last = publication.supervisors | last | last %}
+        {% if second_last %}
+          {{ second_last }}  and 
+        {% endif %}
+        {{ publication.supervisors | last }},  
+      {% endif %}
+      {{ publication.publisher }} 
+      <!-- (<time datetime="{{ publication.date | date_to_xmlschema }}">{{ publication.date | date: "%b. %Y" }}</time>)  -->
+      {% if publication.doi %}
+        <a href="https://doi.org/{{ publication.doi }}"><i class="fa fa-globe""></i><span class="hidden">DOI</span></a>
+      {% elsif publication.link %}
+        <a href="{{ publication.link }}"><i class="fa fa-globe"></i><span class="hidden">URL</span></a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 
 <section id="talks" class="home-section">
   <h2>Talks</h2>
